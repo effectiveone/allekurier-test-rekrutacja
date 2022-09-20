@@ -212,13 +212,15 @@ useEffect(() => {
             </Container>
             <Container >
 <Col style={{display: "flex", flexDirection: "row", paddingTop: "20px",  flexWrap: "wrap"}}>
-   {response.filter((z) =>( z.maxHeight > height  && z.maxWeight > weight && z.maxWidth
+   {response.filter((z) =>( z.maxHeight > height  && z.maxWeight > weight && z.maxLength
+ > length  && z.maxWidth  
  > width && checkFromDoorTest(z.fromDoorShipment, z.fromPointShipment) && checkToDoorDeliveryTest(z.toDoorDelivery, z.toPointDelivery)
 )).map((delivery, index)=> {
   const minWidthZ =  index+1
   return (
     <div
       style={{
+        flexShrink: 0,
         paddingLeft: "30px",
         height: "120px",
         display: "flex",
