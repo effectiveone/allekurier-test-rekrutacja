@@ -79,15 +79,35 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Container style={{borderStyle: "groove", borderRadius: "5%", paddingLeft: "20px", paddingRight: "20px", paddingBottom: "20px, "}}>
-<h2>Wyceń  przesyłkę</h2>
+      <header 
+      // className="App-header"
+        style={{
+          marginLeft: "100px",
+          marginRight: "100px",
+          marginBottom: "20px",
+          marginTop: "100px"
+        }}
+      >
+        <Container
+          style={{
+            borderStyle: "groove",
+            borderRadius: "5%",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingBottom: "20px, ",
+          }}
+        >
+          <h2>Wyceń przesyłkę</h2>
 
-      <Col lg="12" style={{display: "flex", flexDirection: "row"}}>
-              <div id="weight" isRequired className="m-t-15" style={{paddingRight: "20px"}}>
+          <Col lg="12" style={{ display: "flex", flexDirection: "row" }}>
+            <div
+              id="weight"
+              isRequired
+              className="m-t-15"
+              style={{ paddingRight: "20px" }}
+            >
               Waga
-              <div style={{display: "flex", flexDirection: "row"}}>
-
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   {...register("weight")}
                   style={inputStyle}
@@ -99,21 +119,38 @@ useEffect(() => {
                     setWeight(e.target.value);
                   }}
                 />
-                <div style={{backgroundColor: "#d9d6d0",
-              width: "50px", display: "flex", justifyContent: "center"}}>kg</div></div>
-                {errors.weight && (
-                  <Alert variant="danger" show={show}>{errors.weight?.message}
-                   <Button onClick={() => setShow(false)} variant="outline-success">
-            X
-          </Button>
-                  </Alert>
-                )}{" "}
+                <div
+                  style={{
+                    backgroundColor: "#d9d6d0",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  kg
+                </div>
               </div>
-        
-          
-              <div id="width" isRequired className="m-t-15" style={{paddingRight: "20px"}}> 
+              {errors.weight && (
+                <Alert variant="danger" show={show}>
+                  {errors.weight?.message}
+                  <Button
+                    onClick={() => setShow(false)}
+                    variant="outline-success"
+                  >
+                    X
+                  </Button>
+                </Alert>
+              )}{" "}
+            </div>
+
+            <div
+              id="width"
+              isRequired
+              className="m-t-15"
+              style={{ paddingRight: "20px" }}
+            >
               Długość
-              <div style={{display: "flex", flexDirection: "row"}}>
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   {...register("width")}
                   style={inputStyle}
@@ -125,24 +162,38 @@ useEffect(() => {
                     setWidth(e.target.value);
                   }}
                 />
-                          <div style={{backgroundColor: "#d9d6d0",
-              width: "50px", display: "flex", justifyContent: "center"}}>cm</div></div>
-     
-            
-                {errors.width && (
-                  <Alert variant="danger" show={show}>{errors.width?.message}
-                   <Button onClick={() => setShow(false)} variant="outline-success">
-            X
-          </Button>
-                  </Alert>
-                )}{" "}
+                <div
+                  style={{
+                    backgroundColor: "#d9d6d0",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  cm
+                </div>
               </div>
-        
-          
-              <div id="height" isRequired className="m-t-15" style={{paddingRight: "20px"}}>
-                Wysokość
-              <div style={{display: "flex", flexDirection: "row"}}>
+              {errors.width && (
+                <Alert variant="danger" show={show}>
+                  {errors.width?.message}
+                  <Button
+                    onClick={() => setShow(false)}
+                    variant="outline-success"
+                  >
+                    X
+                  </Button>
+                </Alert>
+              )}{" "}
+            </div>
 
+            <div
+              id="height"
+              isRequired
+              className="m-t-15"
+              style={{ paddingRight: "20px" }}
+            >
+              Wysokość
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   {...register("height")}
                   style={inputStyle}
@@ -154,23 +205,38 @@ useEffect(() => {
                     setHeight(e.target.value);
                   }}
                 />
-                                        <div style={{backgroundColor: "#d9d6d0",
-              width: "50px", display: "flex", justifyContent: "center"}}>cm</div></div>
-     
-                {errors.height && (
-                  <Alert variant="danger" show={show}>{errors.height?.message}
-                   <Button onClick={() => setShow(false)} variant="outline-success">
-            X
-          </Button>
-                  </Alert>
-                )}{" "}
+                <div
+                  style={{
+                    backgroundColor: "#d9d6d0",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  cm
+                </div>
               </div>
-        
-          
-              <div id="length" isRequired className="m-t-15" style={{paddingRight: "20px"}}>
-                Szerokość
-              <div style={{display: "flex", flexDirection: "row"}}>
+              {errors.height && (
+                <Alert variant="danger" show={show}>
+                  {errors.height?.message}
+                  <Button
+                    onClick={() => setShow(false)}
+                    variant="outline-success"
+                  >
+                    X
+                  </Button>
+                </Alert>
+              )}{" "}
+            </div>
 
+            <div
+              id="length"
+              isRequired
+              className="m-t-15"
+              style={{ paddingRight: "20px" }}
+            >
+              Szerokość
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   {...register("length")}
                   name="length"
@@ -182,84 +248,126 @@ useEffect(() => {
                     setLength(e.target.value);
                   }}
                 />
-                                        <div style={{backgroundColor: "#d9d6d0",
-              width: "50px", display: "flex", justifyContent: "center"}}>cm</div></div>
-     
-                {errors.length && (
-                  <Alert variant="danger" show={show}>{errors.length?.message}
-                   <Button onClick={() => setShow(false)} variant="outline-success">
-            X
-          </Button>
-                  </Alert>
-                )}{" "}
+                <div
+                  style={{
+                    backgroundColor: "#d9d6d0",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  cm
+                </div>
+              </div>
+              {errors.length && (
+                <Alert variant="danger" show={show}>
+                  {errors.length?.message}
+                  <Button
+                    onClick={() => setShow(false)}
+                    variant="outline-success"
+                  >
+                    X
+                  </Button>
+                </Alert>
+              )}{" "}
+            </div>
+          </Col>
+          <Row
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              paddingTop: "20px",
+              paddingBottom: "20px",
+            }}
+          >
+            <Col lg={6}>
+              Nadanie:
+              <div
+                style={{ display: "flex", flexDirection: "row" }}
+                onChange={Nadanie}
+              >
+                <input type="radio" value="punkt" name="nadanie" /> W punkcie
+                <input type="radio" value="podjazd" name="nadanie" /> Podjazd
+                kuriera
               </div>
             </Col>
-<Row style={{display: "flex", flexDirection: "row", paddingTop: "20px", paddingBottom: "20px"}}>
-<Col lg={6}>Nadanie:
-<div style={{display: "flex", flexDirection: "row"}}  onChange={Nadanie}>
-        <input type="radio" value="punkt" name="nadanie"/> W punkcie
-        <input type="radio" value="podjazd" name="nadanie"/> Podjazd kuriera
-</div>
-</Col>
-<Col lg={6}>Odbiór
-<div style={{display: "flex", flexDirection: "row"}}  onChange={Odbior}>
-        <input type="radio" value="punkt" name="Odbior"/> W punkcie
-        <input type="radio" value="podjazd" name="Odbior"/> Podjazd kuriera
-</div>
-</Col>
-</Row>
+            <Col lg={6}>
+              Odbiór
+              <div
+                style={{ display: "flex", flexDirection: "row" }}
+                onChange={Odbior}
+              >
+                <input type="radio" value="punkt" name="Odbior" /> W punkcie
+                <input type="radio" value="podjazd" name="Odbior" /> Podjazd
+                kuriera
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Col
+            style={{
+              display: "flex",
+              alignContent: "flex-start",
+              flexDirection: "row",
+              paddingTop: "20px",
+              flexWrap: "wrap",
+            }}
+          >
+            {response
+              .filter(
+                (z) =>
+                  z.maxHeight > height &&
+                  z.maxWeight > weight &&
+                  z.maxLength > length &&
+                  z.maxWidth > width &&
+                  checkFromDoorTest(z.fromDoorShipment, z.fromPointShipment) &&
+                  checkToDoorDeliveryTest(z.toDoorDelivery, z.toPointDelivery)
+              )
+              .map((delivery, index) => {
+                const minWidthZ = index + 1;
+                return (
+                  <div
+                    style={{
+                      // flexShrink: 0,
+                      paddingLeft: "30px",
+                      height: "120px",
+                      display: "flex",
+                      flexDirection: "column",
+                      borderStyle: "groove",
+                      borderRadius: "5%",
+                      flex: "1 0 40%",
+                      width: "100%",
+                      // minWidth: "150px",
+                      // maxWidth: "300px",
+                      borderColor: `${delivery.color}`,
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      marginTop: "10px",
+                      marginBottom: "10px",
+                      alignSelf: "center",
+                      gap: 0,
+                    }}
+                    key={delivery.id}
+                  >
+                    <h3 style={{ fontWeight: 500 }}> {delivery.name}</h3>
 
-            </Container>
-            <Container >
-<Col style={{display: "flex", flexDirection: "row", paddingTop: "20px",  flexWrap: "wrap"}}>
-   {response.filter((z) =>( z.maxHeight > height  && z.maxWeight > weight && z.maxLength
- > length  && z.maxWidth  
- > width && checkFromDoorTest(z.fromDoorShipment, z.fromPointShipment) && checkToDoorDeliveryTest(z.toDoorDelivery, z.toPointDelivery)
-)).map((delivery, index)=> {
-  const minWidthZ =  index+1
-  return (
-    <div
-      style={{
-        flexShrink: 0,
-        paddingLeft: "30px",
-        height: "120px",
-        display: "flex",
-        flexDirection: "column",
-        borderStyle: "groove",
-        borderRadius: "5%",
-        flex: "40%",
-        width: "100%",
-        // minWidth: "150px",
-        // maxWidth: "300px",
-        borderColor: `${delivery.color}`,
-        marginLeft: "10px",
-        marginRight: "10px",
-        marginTop: "10px",
-        marginBottom: "10px",
-        alignSelf: "center",
-        gap: 0,
-      }}
-      key={delivery.id}
-    >
-      <h3 style={{ fontWeight: 500 }}> {delivery.name}</h3>
-
-      <em
-        style={{
-          color: `${delivery.color}`,
-          paddingBottom: "10px",
-          marginTop: "-30px",
-          fontSize: "16px",
-        }}
-      >
-        {" "}
-        {delivery.price} zł
-      </em>
-    </div>
-  );})}     
-   </Col> 
-
-
-            </Container>
+                    <em
+                      style={{
+                        color: `${delivery.color}`,
+                        paddingBottom: "10px",
+                        marginTop: "10px",
+                        fontSize: "16px",
+                      }}
+                    >
+                      {" "}
+                      {delivery.price} zł
+                    </em>
+                  </div>
+                );
+              })}
+          </Col>
+        </Container>
       </header>
     </div>
   );
